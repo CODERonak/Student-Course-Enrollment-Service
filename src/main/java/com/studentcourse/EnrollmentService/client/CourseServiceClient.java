@@ -6,7 +6,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.studentcourse.EnrollmentService.dto.CourseResponse;
 
-@FeignClient(name = "course-service", url = "${enrollment-service.feign.course-service.url}")
+// Change this line: Add the full external URL
+@FeignClient(name = "course-service", url = "https://8081-firebase-course-service-1753420895325.cluster-wurh6gchdjcjmwrw2tqtufvhss.cloudworkstations.dev")
 public interface CourseServiceClient {
 
     @GetMapping("/api/courses/{id}")
